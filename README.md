@@ -1,7 +1,7 @@
 
 # AGH Report Theme
 
-A for of  @mzsuetam's pandoc-agh-report-theme.
+A fork of  [@mzsuetam](https://github.com/mzsuetam)'s [pandoc-agh-report-theme](https://github.com/mzsuetam/pandoc-agh-report-theme/tree/main).
 
 ## Personalized improvements
 
