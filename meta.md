@@ -1,13 +1,13 @@
 ---
 subtitle: My Favorite Course
-author: Mateusz Mazur (CWL 1)
+author: Tomasz Ogiołda
 date: \today
 fontsize: 10pt
 geometry: vmargin=2cm, hmargin=1.5cm
 lang: en
 toc: true
 colorlinks: true
-urlcolor: teal
+urlcolor: **teal**
 title-logo: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDHw7zuJOjrKMWz8cUCD3J3GgDs5ACO3EHRA&s
 # title-logo-width: 3cm # default
 header-includes:

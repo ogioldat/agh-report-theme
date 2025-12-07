@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build PDF in Docker",
+      "type": "shell",
+      "command": "docker run --rm -t -v \"${workspaceFolder}/output:/out\" -v \"${fileDirname}:/app/${fileDirnameBasename}\" -e PROJECT_DIR=\"${fileDirnameBasename}\" -e COURSE_SHORTNAME=${input:course} -e AUTHOR_SHORTNAME=togiolda report-doc-builder",
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "course",
+      "type": "pickString",
+      "description": "Choose course shortname",
+      "options": [
+        "advanced-data-mining",
+        "advanced-database-systems",
+        "advanced-machine-learning",
+        "computational-intelligence",
+        "development-workshops-2",
+        "evolutionary-algorithms",
+        "linked-open-data-and-knoledge-graphs",
+        "process-mining"
+      ],
+      "default": "course1"
+    }
+  ]
+}

@@ -1,16 +1,11 @@
-
-COURSE_SHORTNAME := "course"
-AUTHOR_SHORTNAME := "mazurm"
-
 # Generate PDFs for the chosen lab (pass lab name as argument; defaults to most recent lab)
 # You can also treat lab name as a project name if you want to create one report for a standalone project
 # The source file should be named <lab>/<lab>.md
-pdf lab=`ls -td */ | grep --color=never lab | head -n 1 | sed 's:/$::'`:
+pdf lab=`ls -td */ | grep --color=never "$PROJECT_DIR" | head -n 1 | sed 's:/$::'`:
     echo "Generating PDF for lab: {{lab}}"
     cd {{lab}} && pandoc ../meta.md {{lab}}.md \
-    -o {{COURSE_SHORTNAME}}-{{lab}}-{{AUTHOR_SHORTNAME}}.pdf \
+    -o /out/"$COURSE_SHORTNAME"-{{lab}}-"$AUTHOR_SHORTNAME".pdf \
     -F pandoc-crossref \
     --highlight-style=../report-theme/pygments-bg.theme \
     --lua-filter=../filters/double_terminal.lua \
     --lua-filter=../filters/update_title_with_logo.lua \
-    
